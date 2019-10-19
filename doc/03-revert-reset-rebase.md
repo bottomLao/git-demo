@@ -18,3 +18,8 @@ git reset --soft
 git rebase -i 合并多个commit
 -i 实际上就是 --interactive 的简写，在使用 git rebase -i 时，我们要在后面再添加一个参数，这个参数应该是 最新的一个想保留的 Commit
 ```
+```git
+多个commit合并
+
+
+```
