@@ -23,8 +23,19 @@ git rebase -i 合并多个commit
 git rebase -i b45e8f9
 或者
 git rebase -i HEAD~3
-
+接下来进入vi模式, 编辑命令
 squash：使用该 Commit，但会被合并到前一个 Commit 当中
+
+修改最后一次提交的用户信息
+git commit --amend --reset-author
+https://blog.csdn.net/mocoe/article/details/84344411
+
+修改历史的用户信息 
+1. git rebase -i HEAD~3   
+2. edit
+edit 1 commit 1
+pick 2 commit 2
+pick 3 commit 3
 
 
 
