@@ -57,10 +57,11 @@ public SentinelMapperInterceptor newSentinelInterceptor() {
 
 `SentinelTotalInterceptor` is database total flow control.
 
-`SentinelMapperInterceptor` is `Mybatis` Mapper Interface flow control, you can configure `ResourceNameCleaner` in `SentinelMapperInterceptor`.
+`SentinelMapperInterceptor` is `Mybatis` Mapper Interface flow control, you can configure `ResourceNameCleaner` in SentinelMapperInterceptor.
+
 `ResourceNameCleaner` can clean resource name, for example:
-    1. `com.alibaba.csp.sentinel.demo.mybatis.mapper.UserMapper.getById` -> `UserMapper.getById`
-    2. `UserMapper.getById` and `UserMapper.getByName` -> `UserMapper.getBy*`, avoid the amount of context and  will exceed the threshold.
-    3. If you need to exclude some resources (that should not be recorded as Sentinel resources),  you may unify the unwanted resources to the empty string "" or null.
+1. `com.alibaba.csp.sentinel.demo.mybatis.mapper.UserMapper.getById` -> `UserMapper.getById`
+2. `UserMapper.getById` and `UserMapper.getByName` -> `UserMapper.getBy*`, avoid the amount of context and  will exceed the threshold.
+3. If you need to exclude some resources (that should not be recorded as Sentinel resources),  you may unify the unwanted resources to the empty string "" or null.
 
 
